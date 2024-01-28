@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    url: jdbc:h2:~/dataBase:magicianDb
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: update
+
+  h2:
+    console:
+      enabled: true
+
+  profiles:
+    default: default
+
+server:
+  port: 50000

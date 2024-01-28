@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Все учасники</title>
+</head>
+<body>
+<div class="container">
+    <h3>Все учасники</h3>
+    <form class="form-inline pull-right" th:action="@{/app/search}" method="get">
+        <a class="btn btn-info" href="#" th:href="@{/app/add}">Add</a>
+    </form>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Телефон</th>
+            <th>Страна</th>
+            <th>Город</th>
+            <th>Участие в конкурсах</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="contestant : ${contestants}">
+            <td><a th:href="@{|/app/${contestant.id}/view|}" th:text="${contestant.name}"/></td>
+            <td th:text="${contestant.lastName}"/>
+            <td th:text="${contestant.country}"/>
+            <td th:text="${record.city}"/>
+            <td th:text="${contestant.phoneNumber}"/>
+<!--            <td>-->
+<!--                <label>-->
+<!--                    nominations.forEach { (k, v) -> println(k.name + v) }-->
+<!--                    <input type="checkbox" name="Сценическая магия" onclick="submit();"-->
+<!--                           th:checked="${contestant. ? 'checked'">-->
+<!--                    <input type="checkbox" name="Микромагия" onclick="submit();"-->
+<!--                           th:checked="${contestant.addContest(Микромагия, 7)} ? 'checked'">-->
+<!--                </label>-->
+<!--            </td>-->
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
