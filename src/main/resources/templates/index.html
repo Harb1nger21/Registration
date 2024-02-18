@@ -3,8 +3,41 @@
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <meta charset="UTF-8">
-    <title>Конгресс Российской Ассоциации Иллюзионистов </title>
+    <title>Конгресс Российской Ассоциации Иллюзионистов</title>
 </head>
 <body>
+<div class="container">
+    <h3>Все учасники</h3>
+    <form class="form-inline pull-left">
+        <a class="btn btn-default" href="#" th:href="@{/byNomination/${ONE_TRICK}}">Шоу Момент</a>
+        <a class="btn btn-default" href="#" th:href="@{/byNomination/${KIDS_MICROMAGIC}}">Детская Микромагия</a>
+        <a class="btn btn-default" href="#" th:href="@{/byNomination/${MICROMAGIC}}">Микромагия</a>
+        <a class="btn btn-default" href="#" th:href="@{/byNomination/${KIDS_STAGE}}">Детская Магия</a>
+        <a class="btn btn-default" href="#" th:href="@{/byNomination/${STAGE}}">Сценическая Магия</a>
+    </form>
+    <form class="form-inline pull-right">
+        <a class="btn btn-info" href="#" th:href="@{/add}">Add</a>
+    </form>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Телефон</th>
+            <th>Страна</th>
+            <th>Город</th>
+            <!--            <th>Участие в конкурсах</th>-->
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="magician : ${magician}">
+            <td><a th:href="@{|/app/byId/${magician.id}|}" th:text="${magician.name}"/></td>
+            <td th:text="${magician.lastName}"/>
+            <td th:text="${magician.country}"/>
+            <td th:text="${magician.city}"/>
+            <td th:text="${magician.phoneNumber}"/>
+        </tbody>
+    </table>
+</div>
 </body>
 </html>

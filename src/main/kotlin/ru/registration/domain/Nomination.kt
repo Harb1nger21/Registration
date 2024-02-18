@@ -1,4 +1,4 @@
-package ru.registration.entity
+package ru.registration.domain
 
 enum class Nomination(val s: String) {
     ONE_TRICK("Шоу Момент"),

@@ -6,7 +6,6 @@ plugins {
     kotlin("jvm") version "1.9.21"
     kotlin("plugin.spring") version "1.9.21"
     id("org.hibernate.orm") version "6.4.2.Final"
-    kotlin("plugin.noarg") version "1.9.22"
 }
 
 group = "ru"
@@ -22,11 +21,14 @@ repositories {
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
+    implementation("org.springframework.boot:spring-boot-starter-jdbc")
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
-    implementation("javax.persistence:javax.persistence-api:2.2")
+    implementation("jakarta.persistence:jakarta.persistence-api:3.1.0")
     implementation("com.h2database:h2:2.2.220")
+    implementation("org.postgresql:postgresql:42.7.1")
+    implementation("org.springframework.data:spring-data-jpa:3.2.2")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 

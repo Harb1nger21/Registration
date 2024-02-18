@@ -1,21 +1,24 @@
-spring:
-  datasource:
-    url: jdbc:h2:~/dataBase:magicianDb
-    driverClassName: org.h2.Driver
-    username: sa
-    password:
-  jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
-    defer-datasource-initialization: true
-    hibernate:
-      ddl-auto: update
-
-  h2:
-    console:
-      enabled: true
-
-  profiles:
-    default: default
-
 server:
   port: 50000
+spring:
+  datasource:
+#    driverClassName: org.h2.Driver
+    driverClassName: org.postgresql.Driver
+#    url: jdbc:h2:~/dataBase/registration;
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password:
+#    h2:
+#      console:
+#        enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+#        dialect: org.hibernate.dialect.H2Dialect
+#    jdbc:h2:~/dataBase://localhost:9092/registration
+
