@@ -1,5 +1,5 @@
 package ru.registration.dto
 
-import ru.registration.domain.Magician
+import ru.registration.model.Magician
 
-data class ListMagicianResponse(val list: List<Magician>)
+data class ListMagicianResponse(val list: List<MagicianResponse>)

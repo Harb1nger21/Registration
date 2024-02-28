@@ -4,9 +4,9 @@ import org.hibernate.SessionFactory
 import org.hibernate.cfg.Configuration
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
-import ru.registration.domain.Competition
-import ru.registration.domain.Magician
-import ru.registration.domain.Nomination
+//import ru.registration.domain.Competition
+//import ru.registration.domain.Magician
+//import ru.registration.domain.Nomination
 
 
 @SpringBootApplication

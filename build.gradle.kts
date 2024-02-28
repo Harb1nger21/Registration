@@ -25,10 +25,11 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
-    implementation("jakarta.persistence:jakarta.persistence-api:3.1.0")
-    implementation("com.h2database:h2:2.2.220")
+//    implementation("jakarta.persistence:jakarta.persistence-api:3.1.0")
+    implementation("javax.persistence:javax.persistence-api:2.2")
+//    implementation("com.h2database:h2:2.2.220")
     implementation("org.postgresql:postgresql:42.7.1")
-    implementation("org.springframework.data:spring-data-jpa:3.2.2")
+//    implementation("org.springframework.data:spring-data-jpa:3.2.2")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
